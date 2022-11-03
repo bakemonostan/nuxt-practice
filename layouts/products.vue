@@ -1,16 +1,18 @@
 <template>
   <div>
-    <header>
-      <nav>
-        <nuxt-link to="/products">Nuxt Dojo Products</nuxt-link>
+    <header class="shadow-sm bg-white">
+      <nav class="container mx-auto p-4">
+        <nuxt-link to="/products" class="font-bold">
+          Nuxt Dojo Products
+        </nuxt-link>
       </nav>
     </header>
-    <div>
+    <div class="container mx-auto p-4">
       <slot />
     </div>
 
-    <footer>
-      <ul>
+    <footer class="container mx-auto p-4 flex justify-between border-t-2">
+      <ul class="flex gap-4">
         <li>
           <nuxt-link to="/">Home</nuxt-link>
         </li>
@@ -24,26 +26,3 @@
     </footer>
   </div>
 </template>
-
-<style scoped>
-ul {
-  display: flex;
-  gap: 3rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-li {
-  list-style: none;
-}
-
-li a {
-  text-transform: capitalize;
-  text-decoration: none;
-  color: black;
-}
-
-.router-link-exact-active {
-  color: #12b488;
-}
-</style>
