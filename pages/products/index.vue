@@ -3,9 +3,7 @@
     <p>Products page</p>
     <div class="grid grid-cols-4 gap-5">
       <div v-for="product in products">
-        <nuxt-link :to="`/products/${product.id}`">
-          {{ product.title }}
-        </nuxt-link>
+        <Card :product="product" />
       </div>
     </div>
   </div>
